@@ -9,9 +9,9 @@ struct ListNode
 {
     int val;
     ListNode *next;
-    ListNode() : val(0), next(nullptr){}
-    ListNode(int x) : val(x), next(nullptr){}
-    ListNode(int x, ListNode *next) : val(x), next(next){}
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
 class Solution
@@ -21,13 +21,13 @@ public:
     {
         stack<int> s;
         queue<int> q;
-        while(head != NULL)
+        while (head != NULL)
         {
             s.push(head->val);
             q.push(head->val);
             head = head->next;
         }
-        while(!s.empty())
+        while (!s.empty())
         {
             int x = s.top();
             int y = q.front();

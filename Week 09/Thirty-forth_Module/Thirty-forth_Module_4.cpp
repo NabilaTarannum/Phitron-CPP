@@ -21,13 +21,13 @@ public:
         }
         if (s[0] == '-')
             return -sum;
-        else 
+        else
             return sum;
     }
     int calPoints(vector<string> &operations)
     {
         stack<int> st;
-        for (string s:operations)
+        for (string s : operations)
         {
             if (s == "+")
             {
@@ -46,7 +46,7 @@ public:
                 st.pop();
             }
             else
-            {   
+            {
                 int val = convert(s);
                 st.push(val);
             }
